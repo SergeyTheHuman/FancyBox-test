@@ -1,0 +1,47 @@
+doctype html
+html(lang="ru")
+	head
+		include utils/mixins
+		include utils/meta
+		include utils/links
+		include utils/fonts
+		title Main Page
+	body
+		include components/header
+		.container
+			p(data-fancybox data-src="#dialog-content").text Первая модалка
+			p(data-fancybox data-src="#dialog-content").text Первая модалка
+			p(data-fancybox data-src="#dialog-content").text Первая модалка
+			a(data-fancybox data-src="#dialog-content2").link Вторая модалка
+			p(href="@img/cell-background.jpg" data-fancybox="gallery" data-caption="Optional caption") Картинка
+
+			.modal#dialog-content(style="display:none;")
+				h2 Первая модалка!
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam obcaecati. Eveniet, esse et tempora excepturi hic voluptatibus autem ducimus quae deserunt molestiae, rerum ipsa eos nostrum voluptate numquam. Odit quibusdam, facilis minus consequatur fugiat unde dolorem dolorum sunt qui accusantium ducimus neque autem esse repellat sit reprehenderit nemo pariatur! Quod atque explicabo quibusdam, exercitationem ut illo hic! Illum nesciunt odit, possimus asperiores ratione qui earum error corporis, consequuntur unde tempore neque dolorem repudiandae. Esse.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam obcaecati. Eveniet, esse et tempora excepturi hic voluptatibus autem ducimus quae deserunt molestiae, rerum ipsa eos nostrum voluptate numquam. Odit quibusdam, facilis minus consequatur fugiat unde dolorem dolorum sunt qui accusantium ducimus neque autem esse repellat sit reprehenderit nemo pariatur! Quod atque explicabo quibusdam, exercitationem ut illo hic! Illum nesciunt odit, possimus asperiores ratione qui earum error corporis, consequuntur unde tempore neque dolorem repudiandae. Esse.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam obcaecati. Eveniet, esse et tempora excepturi hic voluptatibus autem ducimus quae deserunt molestiae, rerum ipsa eos nostrum voluptate numquam. Odit quibusdam, facilis minus consequatur fugiat unde dolorem dolorum sunt qui accusantium ducimus neque autem esse repellat sit reprehenderit nemo pariatur! Quod atque explicabo quibusdam, exercitationem ut illo hic! Illum nesciunt odit, possimus asperiores ratione qui earum error corporis, consequuntur unde tempore neque dolorem repudiandae. Esse.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam obcaecati. Eveniet, esse et tempora excepturi hic voluptatibus autem ducimus quae deserunt molestiae, rerum ipsa eos nostrum voluptate numquam. Odit quibusdam, facilis minus consequatur fugiat unde dolorem dolorum sunt qui accusantium ducimus neque autem esse repellat sit reprehenderit nemo pariatur! Quod atque explicabo quibusdam, exercitationem ut illo hic! Illum nesciunt odit, possimus asperiores ratione qui earum error corporis, consequuntur unde tempore neque dolorem repudiandae. Esse.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam obcaecati. Eveniet, esse et tempora excepturi hic voluptatibus autem ducimus quae deserunt molestiae, rerum ipsa eos nostrum voluptate numquam. Odit quibusdam, facilis minus consequatur fugiat unde dolorem dolorum sunt qui accusantium ducimus neque autem esse repellat sit reprehenderit nemo pariatur! Quod atque explicabo quibusdam, exercitationem ut illo hic! Illum nesciunt odit, possimus asperiores ratione qui earum error corporis, consequuntur unde tempore neque dolorem repudiandae. Esse.
+				a(data-fancybox data-src="#dialog-content3").link Третья модалка
+			
+			.modal#dialog-content2(style="display:none;")
+				h2 Вторая модалка!
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+			
+			.modal#dialog-content3(style="display:none;")
+				h2 Третья модалка!
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+				a(data-fancybox data-src="#dialog-content4").link Четвертая модалка
+			
+			.modal#dialog-content4(style="display:none;")
+				h2 Четвертая модалка!
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. In, eum nobis culpa dicta recusandae fugiat tenetur et error expedita magni, explicabo voluptas aut quia labore inventore eveniet enim praesentium officia facilis placeat possimus. Alias voluptates, doloribus labore optio ipsum quo eos! Aspernatur dolor voluptas facilis doloremque incidunt commodi explicabo non.
+			
+			#myPanzoom.panzoom
+				img.panzoom__content(src="https://lipsum.app/id/3/2000x1500" alt="#	")
+
+		include components/footer
+		include utils/scripts

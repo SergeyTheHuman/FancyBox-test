@@ -8,15 +8,16 @@ const $text = document.querySelector('.text')
 const $link = document.querySelector('.link')
 
 console.log(document.querySelectorAll('[data-src]'))
+
 document.addEventListener('click', (e) => {
-	if (e.target.hasAttribute('data-src')) {
-		const self = e.target
-		const nextModalId = self.getAttribute('data-src')
-		const currentModal = self.closest('.modal')
-		const $nextModal = document.querySelector(`${nextModalId}`)
-		const asd = Fancybox.getInstance(nextModalId)
+	// Если идет переход из одного попапа в другой, то закрываем предыдущий
+	if (e.target.hasAttribute('data-src') && e.target.closest('.modal')) {
+		let currentModalId = Fancybox.getInstance().id
+		const currentModal = Fancybox.getInstance(currentModalId - 1)
+		currentModal.close()
 	}
 })
+
 const myPanzoom = new Panzoom(document.querySelector('#myPanzoom'), {
 	// Your options go here
 })
